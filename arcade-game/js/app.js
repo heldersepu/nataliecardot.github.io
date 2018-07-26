@@ -92,6 +92,7 @@ class Player {
   // Draws player on screen
   render() {
     ctx.drawImage(Resources.get(this.sprite), this.x, this.y)
+    drawDot(this.x, this.y)
   }
 
   // Object containing character images is passed in as an argument in this method's call
@@ -186,6 +187,7 @@ class Gem {
   // Draws gem on screen
   render() {
     ctx.drawImage(Resources.get(this.sprite), this.x, this.y)
+    drawDot(this.x, this.y)
   }
 
   update() {
@@ -228,6 +230,13 @@ enemyPosition.forEach(function(posY) {
 
 const modal = document.getElementById('myModal');
 const closeIcon = document.querySelector('.close');
+
+function drawDot(x, y) {
+    ctx.beginPath();
+    ctx.arc(x, y, 5, 2 * Math.PI, false)
+    ctx.stroke();
+    ctx.fill();
+}
 
 // When called, adds class that sets modal to display: block when player reaches water
 function showModal() {
