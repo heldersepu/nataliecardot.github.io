@@ -212,7 +212,7 @@ const collectibles = [
 let gem = new Gem(randomGemX, randomGemY);
 
 // Y position of enemies (smaller number means higher up)
-let enemyPosition = [61, 145, 227, 308];
+let enemyPosition = [];//[61, 145, 227, 308];
 
 let allEnemies = [];
 
